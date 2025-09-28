@@ -1,5 +1,3 @@
-
-
 # Car libray
 
 A set of simple functions that allows to easily controll my rc car over internet...

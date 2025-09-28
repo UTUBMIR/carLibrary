@@ -1,6 +1,8 @@
 #ifndef CAR
 #define CAR
 
+#include <cs50.h>
+
 typedef struct {
     int code;
     char* text;
@@ -32,6 +34,9 @@ int driveWithTimer(int left, int right, int timer);
 
 // turns servor for the radar to look at the specified angle
 int look(int angle);
+
+// turns lights on or off
+int light(bool state);
 
 // returns distance from radar to obstacle
 int watch();

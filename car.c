@@ -1,4 +1,3 @@
-#include <cs50.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -120,10 +119,17 @@ int driveWithTimer(int left, int right, int timer) {
     return r.code;
 }
 
-
 // turns servor for the radar to look at the specified angle
 int look(int angle) {
     responseData r = request("/look?angle=%i", angle);
+    free(r.text);
+
+    return r.code;
+}
+
+// turns lights on or off
+int light(bool state) {
+    responseData r = request("/light?state=%c", state ? 't' : 'f');
     free(r.text);
 
     return r.code;
