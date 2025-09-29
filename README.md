@@ -3,14 +3,14 @@
 A set of simple functions that allows to easily controll my rc car over internet...
 
 * this library depends on curl, to install it on linux run: 
-```bash
+```console
 sudo apt install libcurl4-openssl-dev
 ```
 
 
 ## in code
 
-```c
+```cpp
 // sets base url for car
 void setUrl(char* url);
 
@@ -35,7 +35,7 @@ int watch();
 
 ### example
 
-```c
+```cpp
 #include "car.h"
 
 int main() {
