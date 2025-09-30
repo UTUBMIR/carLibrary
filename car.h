@@ -1,6 +1,8 @@
 #ifndef CAR
 #define CAR
 
+#include <stdbool.h>
+
 typedef struct {
     int code;
     char* text;
