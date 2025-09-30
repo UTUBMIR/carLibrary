@@ -6,7 +6,7 @@
 #include <time.h>
 #include "car.h"
 
-char* baseUrl;
+const char* baseUrl;
 int baseUrlLength;
 
 unsigned int writeCallback(void* ptr, unsigned int size, unsigned int nmemb, void* userdata) {
@@ -77,7 +77,7 @@ responseData request(const char* format, ...) {
     return r;
 }
 
-void setUrl(char* url) {
+void setUrl(const char* url) {
     baseUrl = url;
     baseUrlLength = strlen(url);
 }
