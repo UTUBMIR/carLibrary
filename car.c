@@ -78,7 +78,7 @@ responseData request(const char* format, ...) {
 }
 
 void setUrl(const char* url) {
-    baseUrl = url;
+        baseUrl = url;
     baseUrlLength = strlen(url);
 }
 
