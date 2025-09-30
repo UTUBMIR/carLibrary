@@ -16,7 +16,7 @@ struct memory {
 unsigned int writeCallback(void* ptr, unsigned int size, unsigned int nmemb, void* userdata);
 
 // sets base url for car
-void setUrl(char* url);
+void setUrl(const char* url);
 
 responseData get(const char* url);
 
