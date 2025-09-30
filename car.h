@@ -1,8 +1,6 @@
 #ifndef CAR
 #define CAR
 
-#include <cs50.h>
-
 typedef struct {
     int code;
     char* text;
