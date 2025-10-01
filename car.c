@@ -112,14 +112,14 @@ int drive(int left, int right) {
 }
 
 // set speed for left and right motor, from -90 up to 90. timer specifies milliseconds untill stop
-int driveWithTimer(int left, int right, int timer) {
-    responseData r = request("/drive?left=%i&right=%i&timer=%i", left, right, timer);
+int driveWithTimer(int left, int right, long timer) {
+    responseData r = request("/drive?left=%i&right=%i&timer=%ld", left, right, timer);
     free(r.text);
 
     return r.code;
 }
 
-// turns servor for the radar to look at the specified angle
+// turns servo for the radar to look at the specified angle
 int look(int angle) {
     responseData r = request("/look?angle=%i", angle);
     free(r.text);

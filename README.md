@@ -12,7 +12,7 @@ sudo apt install libcurl4-openssl-dev
 
 ```cpp
 // sets base url for car
-void setUrl(char* url);
+void setUrl(const char* url);
 
 // stops program by specified amount of milliseconds
 int sleepm(long msec);
@@ -21,9 +21,9 @@ int sleepm(long msec);
 int drive(int left, int right);
 
 // set speed for left and right motor, from -90 up to 90. timer specifies milliseconds untill stop
-int driveWithTimer(int left, int right, int timer);
+int driveWithTimer(int left, int right, long timer);
 
-// turns servor for the radar to look at the specified angle
+// turns servo for the radar to look at the specified angle
 int look(int angle);
 
 // turns lights on or off
