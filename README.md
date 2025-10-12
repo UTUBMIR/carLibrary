@@ -44,9 +44,8 @@ int main() {
     look(0); // look straight forward
     light(false); // turning off the lights
     driveWithTimer(90, 90, 1000); // drive straight one second on full speed
-    sleepm(1000); // sleep while car is driving
     
-    if (watch() < 50) { // if distance is smaller than 50 centimeters
+    if (watch() < 10) { // if distance is smaller than 10 centimeters
         light(true); // turn on the lights
     }
 }
