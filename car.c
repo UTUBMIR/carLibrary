@@ -115,6 +115,7 @@ int drive(int left, int right) {
 int driveWithTimer(int left, int right, long timer) {
     responseData r = request("/drive?left=%i&right=%i&timer=%ld", left, right, timer);
     free(r.text);
+    sleepm(timer);
 
     return r.code;
 }
